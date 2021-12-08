@@ -1,5 +1,13 @@
 In part 1, it can be proved mathematically that the ideal position is the median.
 Median selection can be performed in O(n) on average with Quickselect algorithm.
 
+Note that `statistics.median` also sorts data first instead of using an O(n) algorithm,
+so using it wouldn't improve the time complexity. However, this issue [1] provides
+comparisons of some O(n) median-finding algorithms written in pure Python to
+the existing algorithm which sorts in O(nlogn) first but uses C for sorting,
+and concludes that O(n) algorithms written in Python do not improve upon the existing.
+
+[1]: https://bugs.python.org/issue21592
+
 In part 2, it can be proved mathematically that the ideal position is very close
 (± 0.5) to the mean. Knowing that improves upon the brute-force solution a lot.
