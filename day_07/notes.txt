@@ -1,0 +1,5 @@
+In part 1, it can be proved mathematically that the ideal position is the median.
+Median selection can be performed in O(n) on average with Quickselect algorithm.
+
+In part 2, it can be proved mathematically that the ideal position is very close
+(± 0.5) to the mean. Knowing that improves upon the brute-force solution a lot.
