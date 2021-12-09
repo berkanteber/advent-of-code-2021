@@ -1,0 +1,21 @@
+In part 2, there are some ways to deduce signals to avoid brute-force:
+    - looking at the signal length to identify signals
+    - looking at the segment frequency to identify segments
+    - diffing signal shapes to identify segments
+    - adding/removing segments to/from already identified signals to identify new signals
+
+For example, all signals can be deduced by following these steps:
+    - signal 1 is the only signal with length = 2
+    - signal 4 is the only signal with length = 4
+    - signal 7 is the only signal with length = 3
+    - signal 8 is the only signal with length = 7
+    - segment b is the only segment with frequency = 6
+    - segment e is the only segment with frequency = 4
+    - signal 3 is the signal 8 without segments b & e
+    - segment a is the diff of signals 1 & 7
+    - signal 9 is the signal 8 without segment a
+    - segment c is the only segment with frequency = 8 other than segment a
+    - signal 6 is the signal 8 without segment c
+    - signal 5 is the signal 6 without segment a
+    - signal 0 is the signal left with length = 6
+    - signal 2 is the signal left
