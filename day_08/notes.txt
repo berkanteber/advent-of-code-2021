@@ -19,3 +19,7 @@ For example, all signals can be deduced by following these steps:
     - signal 5 is the signal 6 without segment a
     - signal 0 is the signal left with length = 6
     - signal 2 is the signal left
+
+Also, while creating correct signal patterns, `str.translate` can be used.
+The current approach is replacing each character with the uppercase version of
+the correct character and then lowercasing the whole string.
