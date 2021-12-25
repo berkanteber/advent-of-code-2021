@@ -1,0 +1,6 @@
+Part 2 solution was initially wrong due to including the bits in literal value packets
+telling to keep or stop reading in the calculation of values. I've identified the problem
+by looking at this tool [1], seeing that the values of some literals are incorrect,
+and rereading the problem statement.
+
+[1]: https://vikithedev.eu/aoc/2021/16/
