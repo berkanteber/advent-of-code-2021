@@ -79,7 +79,10 @@ def solve(data: str) -> int:
                 keep_reading_idx += 5
             end_idx = keep_reading_idx + 4
 
-            literal = Literal(int(packet[6 : end_idx + 1], 2), end_idx + 1)
+            value_bits = packet[6 : end_idx + 1]
+            value_bits = "".join([ch for i, ch in enumerate(value_bits) if i % 5])
+
+            literal = Literal(int(value_bits, 2), end_idx + 1)
             values.append(literal)
 
             if len(packet) - end_idx > 11:
@@ -153,4 +156,4 @@ assert solve("F600BC2D8F") == 0
 assert solve("9C005AC2F8F0") == 0
 assert solve("9C0141080250320F1802104A08") == 1
 
-print(solve(data))  # Wrong Answer
+print(solve(data))  # 660797830937
