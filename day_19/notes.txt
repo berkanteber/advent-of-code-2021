@@ -1,0 +1,12 @@
+Explanation for the possible orientations of scanners felt confusing in the problem statement.
+Upon searching for a better explanation in /r/adventofcode,
+I've found out that 24 orientations can be obtained as follows:
+ - Rotate 0 or 90 or 180 or 270 degrees along xy-plane
+ - Then, rotate 0 or 90 or 180 or 270 degrees along yz-plane
+ - Then, rotate 0 or 90 or 180 or 270 degrees along xz-plane
+At first, it seems like this gives 4^3=64 orientations, but most of them are duplicate.
+And when these duplicates are eliminated, 24 distinct orientations remain.
+
+Also, currently, the solutions for each part take ~5 minutes (on my machine).
+I think a 5-minute execution time indicates poor performance (even when using Python).
+So, I believe the program can (and should) be further optimized.
