@@ -1,4 +1,5 @@
 import os
+from itertools import product
 
 input_path = os.path.join(os.path.dirname(__file__), "input.txt")
 
@@ -21,17 +22,17 @@ def solve(data: str) -> int:
 
         state, count = universes[current_score].popitem()
 
-        for dice in (1, 2, 3):
+        for dice_rolls in product((1, 2, 3), repeat=3):
             (position1, position2), (score1, score2), turn = state
 
             if turn == 1:
-                position1 = (position1 + dice - 1) % 10 + 1
+                position1 = (position1 + sum(dice_rolls) - 1) % 10 + 1
                 score1 += position1
                 if score1 >= 21:
                     wins[1] += count
                     continue
             else:
-                position2 = (position2 + dice - 1) % 10 + 1
+                position2 = (position2 + sum(dice_rolls) - 1) % 10 + 1
                 score2 += position2
                 if score2 >= 21:
                     wins[2] += count
@@ -59,6 +60,6 @@ Player 1 starting position: 4
 Player 2 starting position: 8
 """
 
-assert solve(example_data) == 444356092776315  # Assertion Fails
+assert solve(example_data) == 444356092776315
 
-print(solve(data))  # Wrong Answer
+print(solve(data))  # 809953813657517
