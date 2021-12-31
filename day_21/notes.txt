@@ -1,0 +1,2 @@
+In part 2, the rules can be misunderstood as if there is only 1 dice roll in each round this time.
+This is incorrect and the rules are the same as before (i.e. 3 dice rolls in each round).
